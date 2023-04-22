@@ -14,12 +14,12 @@ int main()
 		arr[i] = rand();
 	}
 
-	int lenght = SIZE;
-	while (lenght != 0)
+	int length = SIZE;
+	while (length != 0)
 	{
 		int max_index = 0;
 
-		for (int i = 1; i < lenght; i++)
+		for (int i = 1; i < length; i++)
 		{
 			if (arr[i] < arr[i - 1])
 			{
@@ -31,7 +31,7 @@ int main()
 				max_index = i;
 			}
 		}
-		lenght = max_index;
+		length = max_index;
 	}
 
 	for (int i = 0; i < SIZE; i++)
