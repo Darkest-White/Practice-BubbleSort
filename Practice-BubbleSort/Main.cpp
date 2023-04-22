@@ -14,23 +14,24 @@ int main()
 		arr[i] = rand();
 	}
 
-
-	bool flag = false;
-	for (int i = 1; i < SIZE; i++)
+	int lenght = SIZE;
+	while (lenght != 0)
 	{
-		if (arr[i] < arr[i - 1])
+		int max_index = 0;
+
+		for (int i = 1; i < lenght; i++)
 		{
-			int temp = arr[i - 1];
-
-			arr[i - 1] = arr[i];
-			arr[i] = temp;
-
-			flag = true;
-			if (flag == true)
+			if (arr[i] < arr[i - 1])
 			{
-				i = 0;
+				int temp = arr[i - 1];
+
+				arr[i - 1] = arr[i];
+				arr[i] = temp;
+
+				max_index = i;
 			}
 		}
+		lenght = max_index;
 	}
 
 	for (int i = 0; i < SIZE; i++)
