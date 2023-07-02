@@ -2,18 +2,8 @@
 using namespace std;
 
 
-int main()
+void bubble_sort(int arr[], const int SIZE)
 {
-	srand(time(0));
-
-	const int SIZE = 15;
-	int arr[SIZE];
-
-	for (int i = 0; i < SIZE; i++)
-	{
-		arr[i] = rand();
-	}
-
 	int length = SIZE;
 	while (length != 0)
 	{
@@ -33,6 +23,22 @@ int main()
 		}
 		length = max_index;
 	}
+}
+
+
+int main()
+{
+	srand(time(0));
+
+	const int SIZE = 10;
+	int arr[SIZE];
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		arr[i] = rand();
+	}
+
+	bubble_sort(arr, SIZE);
 
 	for (int i = 0; i < SIZE; i++)
 	{
