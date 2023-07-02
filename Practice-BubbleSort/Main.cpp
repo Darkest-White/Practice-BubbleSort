@@ -2,6 +2,23 @@
 using namespace std;
 
 
+void fill_arr(int arr[], const int SIZE)
+{
+	for (int i = 0; i < SIZE; i++)
+	{
+		arr[i] = rand() % 101;
+	}
+}
+
+void print_arr(int arr[], const int SIZE)
+{
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << "arr[" << i << "] = " << arr[i] << endl;
+	}
+}
+
+
 void bubble_sort(int arr[], const int SIZE)
 {
 	int length = SIZE;
@@ -33,15 +50,9 @@ int main()
 	const int SIZE = 10;
 	int arr[SIZE];
 
-	for (int i = 0; i < SIZE; i++)
-	{
-		arr[i] = rand();
-	}
+	fill_arr(arr, SIZE);
 
 	bubble_sort(arr, SIZE);
 
-	for (int i = 0; i < SIZE; i++)
-	{
-		cout << "arr[" << i << "] = " << arr[i] << endl;
-	}
+	print_arr(arr, SIZE);
 }
